@@ -72,31 +72,72 @@ CampusTrack/
 
 ## 📸 Application & Implementation Screenshots
 
-The screenshots are stored in the repository's **`screenshots/`** directory (lowercase). The image links below use that exact directory name. GitHub paths are case-sensitive, so keep the directory and image filenames exactly as shown.
+All project screenshots are available in the `screenshots/` directory.
 
-### Database Configuration & Schema
-
-<table>
-  <tr>
-    <td align="center" width="50%"><strong>MongoDB Collections</strong><br/><img src="screenshots/Fig_02_Database_Collections.png" alt="MongoDB Collections" width="100%"/></td>
-    <td align="center" width="50%"><strong>Student Schema Validation</strong><br/><img src="screenshots/Fig_03_Students_Validation.png" alt="Student Schema Validation" width="100%"/></td>
-  </tr>
-  <tr>
-    <td align="center"><strong>Unique Compound Indexes</strong><br/><img src="screenshots/Fig_04_Unique_Compound_Indexes.png" alt="Unique Compound Indexes" width="100%"/></td>
-    <td align="center"><strong>Insert Documents</strong><br/><img src="screenshots/Fig_05_Insert_Documents.png" alt="Insert Documents" width="100%"/></td>
-  </tr>
-</table>
-
-### MongoDB CRUD Operations & Queries
+### 🗄️ Database Configuration & Schema
 
 <table>
-  <tr>
-    <td align="center" width="50%"><strong>Find & Filter Queries</strong><br/><img src="screenshots/Fig_06_Find_Filter_Queries.png" alt="Find and Filter Queries" width="100%"/></td>
-    <td align="center" width="50%"><strong>Unified Student Profile</strong><br/><img src="screenshots/Fig_16_Unified_Student_Profile.png" alt="Unified Student Profile" width="100%"/></td>
-  </tr>
+<tr>
+<th width="50%">MongoDB Collections</th>
+<th width="50%">Student Schema Validation</th>
+</tr>
+<tr>
+<td align="center">
+<a href="screenshots/Fig_02_Database_Collections.png">
+<img src="screenshots/Fig_02_Database_Collections.png" width="100%" alt="MongoDB Collections"/>
+</a>
+</td>
+<td align="center">
+<a href="screenshots/Fig_03_Students_Validation.png">
+<img src="screenshots/Fig_03_Students_Validation.png" width="100%" alt="Student Schema Validation"/>
+</a>
+</td>
+</tr>
+<tr>
+<th>Unique Compound Indexes</th>
+<th>Insert Documents</th>
+</tr>
+<tr>
+<td align="center">
+<a href="screenshots/Fig_04_Unique_Compound_Indexes.png">
+<img src="screenshots/Fig_04_Unique_Compound_Indexes.png" width="100%" alt="Unique Compound Indexes"/>
+</a>
+</td>
+<td align="center">
+<a href="screenshots/Fig_05_Insert_Documents.png">
+<img src="screenshots/Fig_05_Insert_Documents.png" width="100%" alt="Insert Documents"/>
+</a>
+</td>
+</tr>
 </table>
 
-> **Screenshot filename note:** The repository screenshot folder is confirmed as `screenshots/`. The six image filenames above are the filenames previously referenced in this README draft; they must match the actual files in that folder exactly. If your pushed image filenames differ, update the corresponding `src` values. Add further rows for the remaining screenshots using the same two-column table layout.
+### 🔍 MongoDB CRUD Operations & Queries
+
+<table>
+<tr>
+<th width="50%">Find & Filter Queries</th>
+<th width="50%">Unified Student Profile</th>
+</tr>
+<tr>
+<td align="center">
+<a href="screenshots/Fig_06_Find_Filter_Queries.png">
+<img src="screenshots/Fig_06_Find_Filter_Queries.png" width="100%" alt="Find and Filter Queries"/>
+</a>
+</td>
+<td align="center">
+<a href="screenshots/Fig_16_Unified_Student_Profile.png">
+<img src="screenshots/Fig_16_Unified_Student_Profile.png" width="100%" alt="Unified Student Profile"/>
+</a>
+</td>
+</tr>
+</table>
+
+### 📌 More Project Screenshots
+
+Explore the complete collection of application and MongoDB implementation screenshots in the [screenshots folder](screenshots/).
+
+> Click any screenshot to view its full-size image.
+
 
 ## ⚙️ Installation & Setup
 
