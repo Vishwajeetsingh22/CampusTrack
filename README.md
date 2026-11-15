@@ -82,17 +82,17 @@ The screenshots below are displayed directly from the repository. Keep the image
 
 | MongoDB Collections | Student Schema Validation |
 |---|---|
-| ![MongoDB Collections](Report_Screenshots/Fig_02_Database_Collections.png) | ![Student Schema Validation](Report_Screenshots/Fig_03_Students_Validation.png) |
+| ![MongoDB Collections](Report_screenshots/Fig_02_Database_Collections.png) | ![Student Schema Validation](Report_screenshots/Fig_03_Students_Validation.png) |
 
 | Unique Compound Indexes | Insert Documents |
 |---|---|
-| ![Unique Compound Indexes](Report_Screenshots/Fig_04_Unique_Compound_Indexes.png) | ![Insert Documents](Report_Screenshots/Fig_05_Insert_Documents.png) |
+| ![Unique Compound Indexes](Report_screenshots/Fig_04_Unique_Compound_Indexes.png) | ![Insert Documents](Report_screenshots/Fig_05_Insert_Documents.png) |
 
 ### MongoDB CRUD Operations & Queries
 
 | Find and Filter Queries | Unified Student Profile |
 |---|---|
-| ![Find and Filter Queries](Report_Screenshots/Fig_06_Find_Filter_Queries.png) | ![Unified Student Profile](Report_Screenshots/Fig_16_Unified_Student_Profile.png) |
+| ![Find and Filter Queries](Report_screenshots/Fig_06_Find_Filter_Queries.png) | ![Unified Student Profile](Report_screenshots/Fig_16_Unified_Student_Profile.png) |
 
 > **Screenshot note:** The project ZIP provided for review did not contain a `Report_Screenshots` directory. Add your captured screenshots to that folder and use the exact filenames referenced above, or edit the image paths in this section to match your actual filenames. GitHub will show the images once the files are committed and pushed.
 
