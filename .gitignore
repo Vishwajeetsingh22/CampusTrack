@@ -1,0 +1,21 @@
+# Python virtual environments & bytecode
+backend/.venv/
+**/__pycache__/
+*.pyc
+
+# Environment secrets
+backend/.env
+
+# Flutter build & dependencies
+frontend/.dart_tool/
+frontend/.flutter-plugins
+frontend/.flutter-plugins-dependencies
+frontend/.packages
+frontend/build/
+frontend/.pub-cache/
+frontend/.pub/
+
+# IDE files
+.vscode/
+.idea/
+*.iml

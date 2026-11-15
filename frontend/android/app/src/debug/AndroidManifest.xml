@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- The INTERNET permission is required for development. -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    
+    <!-- Development-only cleartext HTTP configuration for local Flask backend (10.0.2.2 / LAN IP).
+         This file is ONLY merged in debug builds and is excluded from production release builds. -->
+    <application android:usesCleartextTraffic="true" />
+</manifest>
