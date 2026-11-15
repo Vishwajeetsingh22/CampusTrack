@@ -21,8 +21,8 @@ CampusTrack provides an integrated platform for managing student information, mo
 - **Attendance Tracking:** Record and monitor daily student attendance.
 - **Performance Management:** Store and manage internal assessment marks.
 - **Dashboard Analytics:** Display student statistics and academic insights.
-- **Reports Generation:** Analyze attendance percentages and academic performance.
-- **MongoDB Integration:** Manage application data using a NoSQL database.
+- **Reports:** Analyze attendance percentages and academic performance.
+- **MongoDB Integration:** Manage data using a document-oriented NoSQL database.
 - **REST API:** Connect the Flutter frontend with the Flask backend.
 
 ## 🛠️ Technology Stack
@@ -30,12 +30,11 @@ CampusTrack provides an integrated platform for managing student information, mo
 | Technology | Purpose |
 |---|---|
 | Flutter & Dart | Frontend development |
-| Python Flask | Backend development |
+| Python Flask | Backend REST API |
 | MongoDB | NoSQL database |
-| PyMongo | Database connectivity |
-| Provider | State management |
+| PyMongo | MongoDB connectivity |
+| Provider | Flutter state management |
 | fl_chart | Data visualization |
-| REST API | Frontend-backend communication |
 | Git & GitHub | Version control |
 
 ## 📂 Project Structure
@@ -53,7 +52,7 @@ CampusTrack/
 │   │   └── seed_data.py
 │   ├── routes/
 │   ├── services/
-│   └── test_backend_suite.py
+│   └── test_*.py
 ├── frontend/
 │   ├── pubspec.yaml
 │   ├── lib/
@@ -65,36 +64,39 @@ CampusTrack/
 │   │   ├── screens/
 │   │   └── widgets/
 │   └── test/
-├── Report_Screenshots/
-├── PROJECT_REPORT.md
-├── LIVE_DEMONSTRATION_SCRIPT.md
-├── VIVA_QUESTIONS_AND_ANSWERS.md
-├── MONGODB_AGGREGATIONS_GUIDE.md
-├── MONGODB_COLLEGE_ACTIVITY_PRACTICAL.md
-└── README.md
+├── screenshots/
+├── .gitignore
+├── README.md
+└── project documentation files
 ```
 
 ## 📸 Application & Implementation Screenshots
 
-The screenshots below are displayed directly from the repository. Keep the image files in a folder named `Report_Screenshots` at the repository root. The image names in the links must match the actual filenames, including uppercase and lowercase letters.
+The screenshots are stored in the repository's **`screenshots/`** directory (lowercase). The image links below use that exact directory name. GitHub paths are case-sensitive, so keep the directory and image filenames exactly as shown.
 
 ### Database Configuration & Schema
 
-| MongoDB Collections | Student Schema Validation |
-|---|---|
-| ![MongoDB Collections](Report_screenshots/Fig_02_Database_Collections.png) | ![Student Schema Validation](Report_screenshots/Fig_03_Students_Validation.png) |
-
-| Unique Compound Indexes | Insert Documents |
-|---|---|
-| ![Unique Compound Indexes](Report_screenshots/Fig_04_Unique_Compound_Indexes.png) | ![Insert Documents](Report_screenshots/Fig_05_Insert_Documents.png) |
+<table>
+  <tr>
+    <td align="center" width="50%"><strong>MongoDB Collections</strong><br/><img src="screenshots/Fig_02_Database_Collections.png" alt="MongoDB Collections" width="100%"/></td>
+    <td align="center" width="50%"><strong>Student Schema Validation</strong><br/><img src="screenshots/Fig_03_Students_Validation.png" alt="Student Schema Validation" width="100%"/></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Unique Compound Indexes</strong><br/><img src="screenshots/Fig_04_Unique_Compound_Indexes.png" alt="Unique Compound Indexes" width="100%"/></td>
+    <td align="center"><strong>Insert Documents</strong><br/><img src="screenshots/Fig_05_Insert_Documents.png" alt="Insert Documents" width="100%"/></td>
+  </tr>
+</table>
 
 ### MongoDB CRUD Operations & Queries
 
-| Find and Filter Queries | Unified Student Profile |
-|---|---|
-| ![Find and Filter Queries](Report_screenshots/Fig_06_Find_Filter_Queries.png) | ![Unified Student Profile](Report_screenshots/Fig_16_Unified_Student_Profile.png) |
+<table>
+  <tr>
+    <td align="center" width="50%"><strong>Find & Filter Queries</strong><br/><img src="screenshots/Fig_06_Find_Filter_Queries.png" alt="Find and Filter Queries" width="100%"/></td>
+    <td align="center" width="50%"><strong>Unified Student Profile</strong><br/><img src="screenshots/Fig_16_Unified_Student_Profile.png" alt="Unified Student Profile" width="100%"/></td>
+  </tr>
+</table>
 
-> **Screenshot note:** The project ZIP provided for review did not contain a `Report_Screenshots` directory. Add your captured screenshots to that folder and use the exact filenames referenced above, or edit the image paths in this section to match your actual filenames. GitHub will show the images once the files are committed and pushed.
+> **Screenshot filename note:** The repository screenshot folder is confirmed as `screenshots/`. The six image filenames above are the filenames previously referenced in this README draft; they must match the actual files in that folder exactly. If your pushed image filenames differ, update the corresponding `src` values. Add further rows for the remaining screenshots using the same two-column table layout.
 
 ## ⚙️ Installation & Setup
 
@@ -119,13 +121,13 @@ Start-Service MongoDB
 ```powershell
 cd backend
 python -m venv .venv
-.venv\Scripts\Activate.ps1
+.\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 ```
 
-Configure the MongoDB connection settings using your local environment configuration. Do not commit passwords, connection strings, or `.env` files containing secrets.
+Configure the MongoDB connection using the environment variables expected by the backend. Do not commit `.env` files or database credentials.
 
-If the project uses the provided database seeder, initialize sample data with:
+If the project uses the supplied seed script, initialize sample data with:
 
 ```powershell
 python db\seed_data.py
@@ -137,11 +139,11 @@ Start the backend:
 python app.py
 ```
 
-Backend address (local development): `http://127.0.0.1:5000`
+Local backend address (if using the default configuration): `http://127.0.0.1:5000`
 
 ### 4. Set Up the Flutter Frontend
 
-Open another terminal from the repository root:
+Open another terminal:
 
 ```powershell
 cd frontend
@@ -149,22 +151,22 @@ flutter pub get
 flutter run -d chrome
 ```
 
-You can also run the app on a configured Android emulator or supported physical device using `flutter run`.
+You can also run the app on a configured Android emulator or supported device. Ensure the frontend API base URL points to the running backend.
 
 ## 🗄️ MongoDB Concepts Demonstrated
 
 - Document-oriented NoSQL database design
-- MongoDB collections and documents
-- Create, Read, Update, and Delete (CRUD) operations
+- Collections and documents
+- CRUD operations
 - JSON Schema validation
 - Unique and compound indexes
 - Query filtering and sorting
-- Aggregation framework and pipeline stages such as `$match`, `$group`, `$lookup`, and `$project`
+- Aggregation framework, including stages such as `$match`, `$group`, `$lookup`, and `$project`
 - Attendance and academic performance analytics
 
 ## 🧪 Testing
 
-Run the relevant tests from the appropriate project directory. Example backend commands:
+Run the tests from the relevant project directories. Backend examples:
 
 ```powershell
 cd backend
@@ -173,13 +175,14 @@ python test_analytics_calculations.py
 python test_e2e_integration.py
 ```
 
-Run Flutter checks from the frontend directory:
+Flutter checks (from the `frontend/` directory):
 
 ```powershell
-cd frontend
 flutter analyze
 flutter test
 ```
+
+Run only test files that are present in your checked-out project.
 
 ## 🎯 Academic Information
 
@@ -200,6 +203,6 @@ flutter test
 ---
 
 <p align="center">
-  <strong>CampusTrack – Smart Attendance. Better Academic Insights.</strong><br />
+  <strong>CampusTrack – Smart Attendance. Better Academic Insights.</strong><br/>
   Developed as part of the MCA NoSQL Databases Activity-2 Mini Project.
 </p>
